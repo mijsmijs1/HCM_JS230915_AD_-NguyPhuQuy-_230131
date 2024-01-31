@@ -6,7 +6,7 @@ import { Store } from '../../store'
 
 export default function QuestionDetail() {
   const questionStore = useSelector((store: Store) => store.questionStore)
-  let question: question[];
+  let question: question[] = [];
   if (questionStore.data) { question = questionStore.data }
 
   const [questionId, setQuestionId] = useState<number | null>(question[0]?.id)
